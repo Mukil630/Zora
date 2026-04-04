@@ -16,80 +16,36 @@
       --text: #e6edf3; --text2: #8b949e; --text3: #6e7681;
     }
     body { background: var(--bg); color: var(--text); font-family: 'Outfit', sans-serif; -webkit-font-smoothing: antialiased; display: flex; min-height: 100vh; }
-
-    /* SIDEBAR */
-    .sidebar {
-      width: 220px; min-width: 220px; background: var(--bg2);
-      border-right: 1px solid var(--border2);
-      display: flex; flex-direction: column;
-      position: fixed; top: 0; bottom: 0; left: 0; z-index: 100;
-    }
-    .sidebar-logo {
-      display: flex; align-items: center; gap: 10px;
-      padding: 20px 18px; border-bottom: 1px solid var(--border2);
-      font-weight: 700; font-size: 16px; text-decoration: none; color: var(--text);
-    }
+    .sidebar { width: 220px; min-width: 220px; background: var(--bg2); border-right: 1px solid var(--border2); display: flex; flex-direction: column; position: fixed; top: 0; bottom: 0; left: 0; z-index: 100; }
+    .sidebar-logo { display: flex; align-items: center; gap: 10px; padding: 20px 18px; border-bottom: 1px solid var(--border2); font-weight: 700; font-size: 16px; text-decoration: none; color: var(--text); }
     .logo-icon { width: 28px; height: 28px; border-radius: 7px; background: linear-gradient(135deg, var(--blue-dim), var(--blue)); display: flex; align-items: center; justify-content: center; font-size: 14px; }
     .sidebar-nav { flex: 1; padding: 12px 10px; overflow-y: auto; }
     .nav-section-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--text3); padding: 8px 10px 4px; }
-    .nav-item {
-      display: flex; align-items: center; gap: 10px;
-      padding: 9px 10px; border-radius: 7px; font-size: 13.5px;
-      color: var(--text2); cursor: pointer; transition: all 0.15s;
-      text-decoration: none; margin-bottom: 1px;
-    }
+    .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 10px; border-radius: 7px; font-size: 13.5px; color: var(--text2); cursor: pointer; transition: all 0.15s; text-decoration: none; margin-bottom: 1px; }
     .nav-item:hover { background: var(--surface); color: var(--text); }
     .nav-item.active { background: rgba(88,166,255,0.1); color: var(--blue); font-weight: 600; }
     .nav-item-icon { font-size: 15px; width: 20px; text-align: center; }
-    .sidebar-footer {
-      padding: 14px 10px; border-top: 1px solid var(--border2);
-    }
-    .user-pill {
-      display: flex; align-items: center; gap: 10px;
-      padding: 10px; border-radius: 8px; cursor: pointer;
-      transition: background 0.2s;
-    }
+    .sidebar-footer { padding: 14px 10px; border-top: 1px solid var(--border2); }
+    .user-pill { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
     .user-pill:hover { background: var(--surface); }
     .user-avatar { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, var(--blue-dim), var(--purple)); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: white; }
     .user-name { font-size: 13px; font-weight: 600; color: var(--text); }
     .user-plan { font-size: 11px; color: var(--text2); }
-
-    /* MAIN */
     .main { margin-left: 220px; flex: 1; display: flex; flex-direction: column; min-height: 100vh; }
-
-    /* TOP BAR */
-    .topbar {
-      height: 56px; background: var(--bg2); border-bottom: 1px solid var(--border2);
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 28px; position: sticky; top: 0; z-index: 50;
-    }
+    .topbar { height: 56px; background: var(--bg2); border-bottom: 1px solid var(--border2); display: flex; align-items: center; justify-content: space-between; padding: 0 28px; position: sticky; top: 0; z-index: 50; }
     .topbar-title { font-size: 15px; font-weight: 700; color: var(--text); }
     .topbar-right { display: flex; align-items: center; gap: 12px; }
-    .btn-new-agent {
-      background: var(--blue); color: #080b12; border: none;
-      padding: 8px 16px; border-radius: 7px; font-size: 13px; font-weight: 700;
-      cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s;
-      display: flex; align-items: center; gap: 6px;
-    }
+    .btn-new-agent { background: var(--blue); color: #080b12; border: none; padding: 8px 16px; border-radius: 7px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; display: flex; align-items: center; gap: 6px; }
     .btn-new-agent:hover { background: var(--cyan); transform: translateY(-1px); }
-
-    /* CONTENT */
     .content { padding: 28px; flex: 1; }
-
-    /* STATS ROW */
     .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
     .stat-card { background: var(--bg3); border: 1px solid var(--border2); border-radius: 10px; padding: 18px 20px; }
     .stat-icon { font-size: 20px; margin-bottom: 10px; }
     .stat-val { font-size: 28px; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--text); }
     .stat-label { font-size: 12px; color: var(--text2); margin-top: 4px; }
     .stat-change { font-size: 11px; color: var(--green); margin-top: 6px; font-family: 'JetBrains Mono', monospace; }
-
-    /* SECTION HEADER */
     .sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .sec-head-title { font-size: 15px; font-weight: 700; color: var(--text); }
-    .sec-head-link { font-size: 12px; color: var(--blue); cursor: pointer; text-decoration: none; }
-
-    /* AGENTS TABLE */
     .agents-table { background: var(--bg3); border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; margin-bottom: 28px; }
     .table-head { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 120px; gap: 16px; padding: 12px 20px; background: var(--surface); border-bottom: 1px solid var(--border2); font-size: 11px; font-weight: 700; color: var(--text2); text-transform: uppercase; letter-spacing: 0.6px; }
     .table-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 120px; gap: 16px; padding: 14px 20px; border-bottom: 1px solid var(--border2); align-items: center; transition: background 0.15s; }
@@ -103,17 +59,13 @@
     .status-pill { font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; display: inline-block; }
     .s-active { background: rgba(63,185,80,0.12); color: var(--green); }
     .s-paused { background: rgba(110,118,129,0.12); color: var(--text2); }
-    .s-trial  { background: rgba(210,153,34,0.12); color: var(--orange); }
-    .s-error  { background: rgba(248,81,73,0.12); color: var(--red); }
+    .s-trial { background: rgba(210,153,34,0.12); color: var(--orange); }
+    .s-error { background: rgba(248,81,73,0.12); color: var(--red); }
     .action-btns { display: flex; gap: 6px; }
     .btn-tbl { background: var(--surface2); border: 1px solid var(--border); color: var(--text2); padding: 5px 10px; border-radius: 5px; font-size: 11px; font-weight: 600; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.15s; }
     .btn-tbl:hover { border-color: var(--blue); color: var(--blue); }
     .btn-tbl.danger:hover { border-color: var(--red); color: var(--red); }
-
-    /* BOTTOM GRID */
     .bottom-grid { display: grid; grid-template-columns: 1fr 340px; gap: 20px; }
-
-    /* ACTIVITY LOG */
     .log-card { background: var(--bg3); border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; }
     .log-head { padding: 14px 18px; border-bottom: 1px solid var(--border2); font-size: 13px; font-weight: 700; }
     .log-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 18px; border-bottom: 1px solid var(--border2); }
@@ -126,8 +78,6 @@
     .log-text { font-size: 13px; color: var(--text2); line-height: 1.5; }
     .log-text strong { color: var(--text); font-weight: 600; }
     .log-time { font-size: 11px; color: var(--text3); margin-top: 2px; font-family: 'JetBrains Mono', monospace; }
-
-    /* QUICK ACTIONS */
     .quick-card { background: var(--bg3); border: 1px solid var(--border2); border-radius: 12px; overflow: hidden; }
     .quick-head { padding: 14px 18px; border-bottom: 1px solid var(--border2); font-size: 13px; font-weight: 700; }
     .quick-item { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-bottom: 1px solid var(--border2); cursor: pointer; transition: background 0.15s; }
@@ -137,8 +87,6 @@
     .quick-label { font-size: 13.5px; font-weight: 600; color: var(--text); }
     .quick-sub { font-size: 12px; color: var(--text2); margin-top: 1px; }
     .quick-arrow { margin-left: auto; color: var(--text3); font-size: 16px; }
-
-    /* MODAL - New Agent */
     .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(6px); z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
     .modal-overlay.open { opacity: 1; pointer-events: all; }
     .modal { background: var(--bg3); border: 1px solid var(--border); border-radius: 16px; padding: 32px; width: 500px; max-width: 92vw; transform: translateY(20px); transition: transform 0.25s; }
@@ -154,22 +102,15 @@
     .btn-create { width: 100%; padding: 13px; background: var(--blue); color: #080b12; border: none; border-radius: 8px; font-size: 14px; font-weight: 700; cursor: pointer; font-family: 'Outfit', sans-serif; transition: all 0.2s; }
     .btn-create:hover { background: var(--cyan); }
     .btn-create:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    /* TOAST */
     .toast { position: fixed; bottom: 24px; right: 24px; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; font-size: 14px; color: var(--text); z-index: 99999; transform: translateY(80px); opacity: 0; transition: all 0.35s ease; display: flex; align-items: center; gap: 10px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
     .toast.show { transform: translateY(0); opacity: 1; }
-
-    /* EMPTY STATE */
     .empty-state { text-align: center; padding: 56px 20px; color: var(--text2); }
     .empty-icon { font-size: 48px; margin-bottom: 14px; opacity: 0.5; }
     .empty-title { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 8px; }
     .empty-sub { font-size: 13px; }
-
-    /* LOADING */
     .loading { display: flex; align-items: center; justify-content: center; padding: 40px; }
     .spinner { width: 28px; height: 28px; border: 2px solid var(--border); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.7s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-
     @media (max-width: 900px) {
       .sidebar { width: 60px; min-width: 60px; }
       .sidebar-logo span, .nav-item span:not(.nav-item-icon), .nav-section-label, .user-name, .user-plan { display: none; }
@@ -183,7 +124,6 @@
 </head>
 <body>
 
-<!-- NEW AGENT MODAL -->
 <div class="modal-overlay" id="agentModal">
   <div class="modal">
     <div class="modal-header">
@@ -194,27 +134,25 @@
     <input type="text" class="form-input" id="agentName" placeholder="e.g. My Telegram Notifier"/>
     <label class="form-label">Agent type</label>
     <select class="form-select" id="agentType">
+      <option value="groq">🤖 Groq AI Assistant</option>
       <option value="telegram">📨 Telegram Bot</option>
       <option value="gmail">📧 Gmail Automator</option>
       <option value="sheets">📊 Sheets Logger</option>
-      <option value="ai">🤖 AI Assistant</option>
       <option value="whatsapp">💬 WhatsApp Campaign</option>
     </select>
-    <label class="form-label">API Key / Token</label>
-    <input type="password" class="form-input" id="agentApiKey" placeholder="Paste your API key or token"/>
+    <label class="form-label">API Key / Token (optional)</label>
+    <input type="password" class="form-input" id="agentApiKey" placeholder="Leave empty to use default key"/>
     <label class="form-label">Description (optional)</label>
     <input type="text" class="form-input" id="agentDesc" placeholder="What does this agent do?"/>
     <button class="btn-create" id="createBtn" onclick="createAgent()">Create agent →</button>
   </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast">
   <span id="toastIcon">✓</span>
   <span id="toastMsg">Done!</span>
 </div>
 
-<!-- SIDEBAR -->
 <div class="sidebar">
   <a href="/" class="sidebar-logo">
     <div class="logo-icon">⚡</div>
@@ -222,25 +160,13 @@
   </a>
   <div class="sidebar-nav">
     <div class="nav-section-label">Main</div>
-    <a class="nav-item active" href="dashboard.html">
-      <span class="nav-item-icon">🤖</span><span>Agents</span>
-    </a>
-    <a class="nav-item" href="logs.html">
-      <span class="nav-item-icon">📊</span><span>Logs</span>
-    </a>
-    <a class="nav-item" href="integrations.html">
-      <span class="nav-item-icon">🔗</span><span>Integrations</span>
-    </a>
-    <a class="nav-item" href="#">
-      <span class="nav-item-icon">📈</span><span>Analytics</span>
-    </a>
+    <a class="nav-item active" href="dashboard.html"><span class="nav-item-icon">🤖</span><span>Agents</span></a>
+    <a class="nav-item" href="#"><span class="nav-item-icon">📊</span><span>Logs</span></a>
+    <a class="nav-item" href="#"><span class="nav-item-icon">🔗</span><span>Integrations</span></a>
+    <a class="nav-item" href="#"><span class="nav-item-icon">📈</span><span>Analytics</span></a>
     <div class="nav-section-label">Account</div>
-    <a class="nav-item" href="#">
-      <span class="nav-item-icon">⚙️</span><span>Settings</span>
-    </a>
-    <a class="nav-item" href="#" onclick="logout()">
-      <span class="nav-item-icon">🚪</span><span>Log out</span>
-    </a>
+    <a class="nav-item" href="#"><span class="nav-item-icon">⚙️</span><span>Settings</span></a>
+    <a class="nav-item" href="#" onclick="logout()"><span class="nav-item-icon">🚪</span><span>Log out</span></a>
   </div>
   <div class="sidebar-footer">
     <div class="user-pill">
@@ -253,7 +179,6 @@
   </div>
 </div>
 
-<!-- MAIN -->
 <div class="main">
   <div class="topbar">
     <div class="topbar-title">My agents</div>
@@ -261,45 +186,38 @@
       <button class="btn-new-agent" onclick="openAgentModal()">+ New agent</button>
     </div>
   </div>
-
   <div class="content">
-    <!-- STATS -->
     <div class="stats-row">
       <div class="stat-card">
         <div class="stat-icon">🤖</div>
         <div class="stat-val" id="statAgents">–</div>
-        <div class="stat-label">Active agents</div>
-        <div class="stat-change" id="statAgentsChange"></div>
+        <div class="stat-label">Total agents</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">⚡</div>
         <div class="stat-val" id="statRuns">–</div>
-        <div class="stat-label">Total runs today</div>
-        <div class="stat-change">+12% from yesterday</div>
+        <div class="stat-label">Total runs</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">✅</div>
         <div class="stat-val">99.8%</div>
         <div class="stat-label">Success rate</div>
-        <div class="stat-change" style="color:var(--green)">▲ 0.2%</div>
       </div>
       <div class="stat-card">
         <div class="stat-icon">🔗</div>
-        <div class="stat-val" id="statIntegrations">–</div>
-        <div class="stat-label">Integrations</div>
-        <div class="stat-change"></div>
+        <div class="stat-val">Free</div>
+        <div class="stat-label">Current plan</div>
       </div>
     </div>
 
-    <!-- AGENTS TABLE -->
     <div class="sec-head">
       <div class="sec-head-title">Your agents</div>
     </div>
     <div class="agents-table" id="agentsTable">
       <div class="table-head">
         <span>Agent</span>
-        <span>Status</span>
-        <span class="col-runs">Runs today</span>
+        <span>Type</span>
+        <span class="col-runs">Runs</span>
         <span class="col-last">Last run</span>
         <span>Actions</span>
       </div>
@@ -307,48 +225,28 @@
       <div id="agentsBody"></div>
     </div>
 
-    <!-- BOTTOM -->
     <div class="bottom-grid">
-      <!-- ACTIVITY LOG -->
       <div class="log-card">
         <div class="log-head">Recent activity</div>
         <div id="activityLog">
-          <div class="loading"><div class="spinner"></div></div>
+          <div class="empty-state"><div class="empty-sub">No activity yet</div></div>
         </div>
       </div>
-      <!-- QUICK ACTIONS -->
       <div class="quick-card">
         <div class="quick-head">Quick actions</div>
         <div class="quick-item" onclick="openAgentModal()">
           <div class="quick-icon">➕</div>
-          <div>
-            <div class="quick-label">Create agent</div>
-            <div class="quick-sub">Set up a new automation</div>
-          </div>
+          <div><div class="quick-label">Create agent</div><div class="quick-sub">Set up a new automation</div></div>
           <div class="quick-arrow">›</div>
         </div>
-        <div class="quick-item" onclick="window.location.href='integrations.html'">
+        <div class="quick-item" onclick="showToast('Coming soon!', '🔗')">
           <div class="quick-icon">🔗</div>
-          <div>
-            <div class="quick-label">Manage integrations</div>
-            <div class="quick-sub">Connect APIs & services</div>
-          </div>
+          <div><div class="quick-label">Integrations</div><div class="quick-sub">Connect APIs & services</div></div>
           <div class="quick-arrow">›</div>
         </div>
-        <div class="quick-item" onclick="window.location.href='logs.html'">
-          <div class="quick-icon">📊</div>
-          <div>
-            <div class="quick-label">View full logs</div>
-            <div class="quick-sub">Detailed run history</div>
-          </div>
-          <div class="quick-arrow">›</div>
-        </div>
-        <div class="quick-item" onclick="showToast('Docs coming soon!', '📚')">
+        <div class="quick-item" onclick="showToast('Coming soon!', '📚')">
           <div class="quick-icon">📖</div>
-          <div>
-            <div class="quick-label">Documentation</div>
-            <div class="quick-sub">Setup guides & API docs</div>
-          </div>
+          <div><div class="quick-label">Documentation</div><div class="quick-sub">Setup guides & API docs</div></div>
           <div class="quick-arrow">›</div>
         </div>
       </div>
@@ -357,41 +255,31 @@
 </div>
 
 <script>
-  const API = window.location.hostname === 'localhost' ? 'http://localhost:3001' : '';
+  const API = 'https://agentflow-backend-6eaq.onrender.com';
 
-  // Auth guard
   const token = localStorage.getItem('af_token');
   const user = JSON.parse(localStorage.getItem('af_user') || '{}');
-  if (!token) { window.location.href = '/index.html'; }
+  if (!token) { window.location.href = 'auth.html'; }
 
-  // Populate user info
   document.getElementById('userName').textContent = user.name || user.email || 'User';
   document.getElementById('userAvatar').textContent = (user.name || user.email || 'U')[0].toUpperCase();
 
   const headers = { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` };
-
-  const agentEmoji = { telegram:'📨', gmail:'📧', sheets:'📊', ai:'🤖', whatsapp:'💬' };
-  const agentLabel = { telegram:'Telegram Bot', gmail:'Gmail Automator', sheets:'Sheets Logger', ai:'AI Assistant', whatsapp:'WhatsApp Campaign' };
+  const agentEmoji = { groq:'🤖', telegram:'📨', gmail:'📧', sheets:'📊', whatsapp:'💬' };
+  const agentLabel = { groq:'Groq AI', telegram:'Telegram Bot', gmail:'Gmail', sheets:'Sheets', whatsapp:'WhatsApp' };
 
   async function loadDashboard() {
     try {
-      const [statsRes, agentsRes, logsRes] = await Promise.all([
-        fetch(`${API}/api/dashboard/stats`, { headers }),
-        fetch(`${API}/api/agents`, { headers }),
-        fetch(`${API}/api/logs?limit=8`, { headers })
-      ]);
-      const stats = await statsRes.json();
-      const agents = await agentsRes.json();
-      const logs = await logsRes.json();
+      const res = await fetch(`${API}/api/agents`, { headers });
+      const data = await res.json();
+      const agents = data.agents || [];
 
-      // Stats
-      document.getElementById('statAgents').textContent = stats.activeAgents ?? agents.filter(a => a.status === 'active').length;
-      document.getElementById('statRuns').textContent = stats.runsToday ?? '0';
-      document.getElementById('statIntegrations').textContent = stats.integrations ?? '0';
+      document.getElementById('statAgents').textContent = agents.length;
+      document.getElementById('statRuns').textContent = agents.reduce((s, a) => s + (a.run_count || 0), 0);
 
-      // Agents table
       document.getElementById('agentsLoading').style.display = 'none';
       const tbody = document.getElementById('agentsBody');
+
       if (!agents.length) {
         tbody.innerHTML = `<div class="empty-state"><div class="empty-icon">🤖</div><div class="empty-title">No agents yet</div><div class="empty-sub">Click "+ New agent" to create your first automation</div></div>`;
       } else {
@@ -404,36 +292,18 @@
                 <div class="tbl-sub">${agentLabel[a.type] || a.type}</div>
               </div>
             </div>
-            <div><span class="status-pill s-${a.status || 'paused'}">${statusLabel(a.status)}</span></div>
-            <div class="col-runs tbl-val">${a.runsToday ?? 0}</div>
-            <div class="col-last tbl-val">${a.lastRun ? timeAgo(a.lastRun) : 'Never'}</div>
+            <div class="tbl-val">${agentLabel[a.type] || a.type}</div>
+            <div class="col-runs tbl-val">${a.run_count || 0}</div>
+            <div class="col-last tbl-val">${a.last_run ? timeAgo(a.last_run) : 'Never'}</div>
             <div class="action-btns">
-              <button class="btn-tbl" onclick="toggleAgent('${a._id || a.id}', '${a.status}')">${a.status === 'active' ? 'Pause' : 'Run'}</button>
-              <button class="btn-tbl danger" onclick="deleteAgent('${a._id || a.id}')">Delete</button>
-            </div>
-          </div>
-        `).join('');
-      }
-
-      // Activity log
-      const logEl = document.getElementById('activityLog');
-      if (!logs.length) {
-        logEl.innerHTML = `<div class="empty-state"><div class="empty-sub">No activity yet</div></div>`;
-      } else {
-        logEl.innerHTML = logs.map(l => `
-          <div class="log-item">
-            <div class="log-dot ${logColor(l.level)}"></div>
-            <div>
-              <div class="log-text"><strong>${escHtml(l.agentName || 'Agent')}</strong> — ${escHtml(l.message)}</div>
-              <div class="log-time">${timeAgo(l.createdAt)}</div>
+              <button class="btn-tbl" onclick="deleteAgent('${a.id}')">Delete</button>
             </div>
           </div>
         `).join('');
       }
     } catch (err) {
-      console.error(err);
       document.getElementById('agentsLoading').style.display = 'none';
-      document.getElementById('agentsBody').innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Could not load agents</div><div class="empty-sub">Is the backend running?</div></div>`;
+      document.getElementById('agentsBody').innerHTML = `<div class="empty-state"><div class="empty-icon">⚠️</div><div class="empty-title">Could not load agents</div></div>`;
     }
   }
 
@@ -441,48 +311,38 @@
     const name = document.getElementById('agentName').value.trim();
     const type = document.getElementById('agentType').value;
     const apiKey = document.getElementById('agentApiKey').value.trim();
-    const description = document.getElementById('agentDesc').value.trim();
     const btn = document.getElementById('createBtn');
-    if (!name || !apiKey) { showToast('Please fill in all required fields', '⚠️'); return; }
+    if (!name) { showToast('Please enter agent name!', '⚠️'); return; }
     btn.disabled = true; btn.textContent = 'Creating...';
     try {
+      const credentials = apiKey ? { apiKey } : {};
       const res = await fetch(`${API}/api/agents`, {
         method: 'POST', headers,
-        body: JSON.stringify({ name, type, apiKey, description })
+        body: JSON.stringify({ name, type, credentials })
       });
       const data = await res.json();
       if (res.ok) {
         closeAgentModal();
-        showToast('Agent created successfully!', '✓');
+        showToast('Agent created!', '✓');
         loadDashboard();
         document.getElementById('agentName').value = '';
         document.getElementById('agentApiKey').value = '';
-        document.getElementById('agentDesc').value = '';
       } else {
-        showToast(data.error || 'Failed to create agent', '⚠️');
+        showToast(data.error || 'Failed!', '⚠️');
       }
     } catch (e) {
-      showToast('Server error. Is backend running?', '⚠️');
+      showToast('Server error!', '⚠️');
     }
     btn.disabled = false; btn.textContent = 'Create agent →';
   }
 
-  async function toggleAgent(id, currentStatus) {
-    const newStatus = currentStatus === 'active' ? 'paused' : 'active';
-    try {
-      await fetch(`${API}/api/agents/${id}`, { method: 'PUT', headers, body: JSON.stringify({ status: newStatus }) });
-      showToast(`Agent ${newStatus === 'active' ? 'activated' : 'paused'}`, newStatus === 'active' ? '✓' : '⏸');
-      loadDashboard();
-    } catch (e) { showToast('Action failed', '⚠️'); }
-  }
-
   async function deleteAgent(id) {
-    if (!confirm('Delete this agent? This cannot be undone.')) return;
+    if (!confirm('Delete this agent?')) return;
     try {
       await fetch(`${API}/api/agents/${id}`, { method: 'DELETE', headers });
-      showToast('Agent deleted', '🗑️');
+      showToast('Agent deleted!', '🗑️');
       loadDashboard();
-    } catch (e) { showToast('Delete failed', '⚠️'); }
+    } catch (e) { showToast('Delete failed!', '⚠️'); }
   }
 
   function openAgentModal() { document.getElementById('agentModal').classList.add('open'); }
@@ -492,7 +352,7 @@
   function logout() {
     localStorage.removeItem('af_token');
     localStorage.removeItem('af_user');
-    window.location.href = '/index.html';
+    window.location.href = 'auth.html';
   }
 
   function showToast(msg, icon = '✓') {
@@ -503,12 +363,6 @@
     setTimeout(() => t.classList.remove('show'), 3500);
   }
 
-  function statusLabel(s) {
-    return { active: '● Active', paused: '⏸ Paused', trial: '⏳ Trial', error: '✗ Error' }[s] || s;
-  }
-  function logColor(level) {
-    return { success: 'green', info: 'blue', warning: 'orange', error: 'red' }[level] || 'blue';
-  }
   function timeAgo(dateStr) {
     const diff = Date.now() - new Date(dateStr);
     if (diff < 60000) return 'just now';
@@ -516,6 +370,7 @@
     if (diff < 86400000) return Math.floor(diff / 3600000) + 'h ago';
     return Math.floor(diff / 86400000) + 'd ago';
   }
+
   function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
   loadDashboard();
